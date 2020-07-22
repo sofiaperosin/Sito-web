@@ -1,0 +1,484 @@
+/*
+module: stile.css
+author: Sofia Perosin
+date: 10/06/2019
+*/
+
+/*CSS per la visualizzazione a schermo*/
+@media screen{
+	/*Caratteristiche del body*/
+	body{
+		/*Definisco i margini*/
+		margin: 1em;
+		/*Definisco l'interlinea*/
+		line-height: 1.3;
+		/*Caratteristiche dello sfondo*/
+		background-color: rgba(0,159,130,0.4);
+		/*Caratteristiche del font*/
+		font-family: Helvetica, Arial, sans-serif; font-size: 100%; color: black;	
+	}
+
+	/*Caratteristiche dell'header*/
+	#lHeader{
+		/*Caratteri di dimensione minore*/
+		font-size: 80%;
+		/*Quando riduco la view non si affianca*/
+		clear: both;
+	}
+
+	#titolo{
+		text-align: center;
+	}
+	
+	.utente{
+		text-align: right;
+	}
+
+	/*Caratteristiche del menu*/
+	#ilMenu{
+		/*Scorre a sinistra*/
+		float: left;
+		/*Definsico il padding su tutti i lati*/
+		padding: 1%;
+		/*Ridefinisco il padding sulla destra*/
+		padding-right: 5%;
+		/*Definisco la larghezza*/
+		width: 10%;
+	}
+
+	/*Caratteristiche del contenuto principale del body*/
+	#ilContenuto{
+		/*Scorre a sinistra*/
+		float: left;
+		/*Definsico il padding su tutti i lati*/
+		padding: 1%;
+		/*Ridefinisco il padding sottostante*/
+		padding-bottom: 2em;
+		/*Definisco la larghezza*/
+		width: 75%;
+		/*Definisco la larghezza minima*/
+		min-width: 30em;
+	}
+
+	/*Caratteristiche del footer*/
+	#ilFooter{	
+		/*Caratteri di dimensione minore*/
+		font-size: 80%;
+		/*Non scorre*/
+		float: none;
+		/*Non deve avere elementi vicini*/
+		clear: both;
+		/*Definisco la larghezza, non 100% per evitare che eventualli immagini escano dai limiti*/
+		width: 99%;
+		/*Definisco l'allinemanto del testo*/
+		text-align: right;
+		/*Definisco i margini*/
+		margin-bottom: 1em;
+		/*Definsico il padding su tutti i lati*/
+		padding: 1%;
+		/*Ridefinisco il padding superiore*/
+		padding-top: 2em;
+	}
+	
+	#foto{
+		float: right;
+		width: 50%;
+		padding: 1em 1em 1em;
+	}
+	
+	#specNome{
+		float: left;
+		font-size: 80%;
+		max-width:50%
+	}
+	
+	#specPass{
+		float: right;
+		font-size: 80%;
+		max-width:50%
+	}
+	
+	/*Caratteristiche per tutti gli elementi appartenenti alla classe email*/
+	.email{
+		/*In corsivo*/
+		font-style: italic;
+	}
+	
+	/*Caratteristiche per tutti gli elementi appartenenti alla classe indicazioni (specifiche che devono avere username e password per essere validi)*/
+	.indicazioni{
+		/*Sottolineati*/
+		text-decoration: underline;
+	}
+	
+	/*Gli elementi appartenenti alla classe titolo devono essere in grassetto*/
+	.titolo{
+		font-weight: bold;
+	}
+	
+	
+	/*Gli elementi appartenenti alla classe attenzione devono essere in rosso e sottolineati visto che segnalano un problema*/
+	.attenzione{
+		color:red;
+		text-decoration: underline;
+	}
+	
+	/*Caratteristiche degli elementi appartenenti alla classe citazione*/
+	.citazione{
+		float: right;
+		text-align: right;
+		font-style: italic;
+	}
+	
+	/*Caratteristiche del separatore tematico*/
+	hr{
+		border-color: white;
+	}
+	
+	/*Caratteristiche di tutti i link*/
+	a{
+		/*Caratteristiche del font*/
+		font-family: Helvetica, Arial, sans-serif; font-size: 100%; color: black;
+		/*Sono sottolineati*/
+		text-decoration: underline;
+	}
+	
+	/*Caratteristiche solo dei link nel menu*/
+	li>a{
+		text-decoration: none;
+	}
+	/*Quando passo col mouse sul link o quando lo clicco*/
+	li>a:hover,li>a:active{
+		/*Il colore diventa piu' scuro*/
+		color: black;
+		/*Il carattere si ingrandisce*/
+		font-size: 130%;
+		/*Il carattere viene messo in risalto dal grassetto*/
+		font-weight: bold;
+	}
+	
+	/*Caratteristiche solo dei link nel menu che vengono disabilitati (login quando c'e' gia' un loggato, logout quando non c'e' ancora nessuno loggato)*/
+	/*Sia quando non ci interagisco, sia quando passo col mouse sul link o quando lo clicco*/
+	.disabilita,.disabilita:hover,.disabilita:active{
+		/*Rimangono sempre neri*/
+		color: black;
+		/*Il carattere non si ingrandisce mai*/
+		font-size: 100%;
+		/*Il carattere non viene mai messo in risalto dal grassetto*/
+		font-weight: normal;
+	}
+	
+	/*Caratteristiche dei bottom dei form*/
+	.buttonRestituisci{
+		background-color:rgb(192,192,192);
+		color: black;
+		text-align: center;
+		cursor: pointer;
+		padding: 1em 1em;
+		border: 1px solid black;
+	}
+	
+	/*Caratteristiche dei fieldset*/
+	fieldset{
+		margin-top:3%;
+		margin-left:3%;
+		border-color: black;
+	}
+	
+	
+	/*Caratteristiche dei bottoni dei fieldset*/
+	.buttomFieldset{
+		background-color:rgb(192,192,192);
+		color: black;
+		text-align: center;
+		cursor: pointer;
+		display: block;
+		clear: left;
+		float: left;
+		width: 10em;
+		padding: 1em 1em;
+		border: 1px solid black;
+	}
+	
+	/*Caratteristiche dei bottoni dei fieldset e del form quando vengono premuti*/
+	.buttomFieldset:active,.buttonRestituisci:active{
+		background-color: white;
+		font-weight: bold;
+		border: 3px solid black;
+		box-shadow: 0 0.1em black;
+		transform: translateY(4px);
+	}
+	
+	/*Caratteristiche dei bottoni dei fieldset e del form quando ci passo sopra col mouse*/
+	.buttomFieldset:hover,.buttonRestituisci:hover{
+		background-color: white;
+		font-weight: bold;
+		border: 3px solid black;
+	}
+	
+	/*Caratteristiche dei bottoni dei fieldset della pagina Libri*/
+	#buttomFieldsetLibri{
+		clear: none;
+	}
+	
+	/*Caratteristiche del bottone submit del fieldset della pagina Login*/
+	#buttomFieldsetLogin{
+		clear: none;
+	}
+	
+	/*Caratteristiche delle etichette*/
+	label{
+		display: block;
+		clear: left;
+		width: 10em;
+		float: left;
+		margin: 1em 1em;
+	}
+	
+	/*Caratteristiche dei campi di input contenuti nei fieldset*/
+	fieldset>input{
+		margin: 1em 1em;
+		float: left;
+	}
+	
+	/*Caratteristiche delle immagini*/
+
+	
+	/*Caratteristiche delle tabelle*/
+	table {
+		border: 1px solid black;
+		margin-top:3%;
+		margin-left:3%;
+		margin-right: 3%;
+		display: table;
+		border-collapse: collapse;
+		border-spacing: 2px;
+		border-color: black;
+		table-layout: auto;
+		width: 100%;
+		}
+		
+	/*Le righe di tutte le tabelle con sfondo bianco*/
+	tr{
+		background-color: white;
+	}
+	
+	/*Caratteristiche dell'intestazione di tutte le tabelle*/
+	th {
+		border: 1px solid black;
+		color: black;
+		text-align: center;
+		padding:1.3em;
+		background-color: rgb(192,192,192);
+	}
+	
+	/*Caratteristiche delle celle di tutte le tabelle*/
+	td {  
+		border: 1px solid black;
+		padding:1.3em;
+		vertical-align: center;
+		text-align: center;
+	}
+	
+	/*Caratteristiche della didascalia di tutte le tabelle*/
+	caption{ 
+		border: 3px solid black;
+		padding:1.3em;
+		background-color: rgb(192,192,192);
+	}
+	
+	/*Oscuro la terza colona della tabella relativa ai prestiti dell'utente registrato*/	
+	.inPrestito>td:nth-child(3){
+		display: none;
+	}
+		
+	/*Quando passo col mouse su un record delle due tabelle metto in evidenza il record*/
+	.disponibili:hover,.inPrestito:hover{		
+		font-weight: bold;
+		border: 2px solid black;
+	}
+	
+	.figlie{
+		width: 50%;
+		margin-bottom: 0em;
+	}
+	
+	.seconda{
+		margin-top:0;
+	}
+	
+	
+	
+	
+}
+
+/*Per la visualizzazione a stampa, PRINTER-FRIENDLY*/
+@media print {
+	
+	body{
+		/*Testo nero su sfondo bianco*/
+		background-color: white; color: black;
+		/*Utilizzo di font con grazie e dimensione fissa*/
+		font-family: "Times New Roman", Times, serif; font-size: 12pt;
+		/*Definisco i margini*/
+		margin: 1pt;
+		/*Definisco l'interlinea*/
+		line-height: 1.3;
+	}
+	
+	/*Rimozione dell'Header*/
+	#lHeader{
+		display: none;
+	}
+
+	/*Rimozione dei menu per la navigazione tra pagine*/
+	#ilMenu{
+		display: none;
+	}
+
+	/*Caratteristiche del contenuto principale del body*/
+	#ilContenuto{
+		/*Definsico il padding su tutti i lati*/
+		padding: 1em;
+		/*Ridefinisco il padding superiore*/
+		padding-top: 2em;
+		/*Definisco la larghezza minima*/
+		min-width: 30em;
+	}
+
+	/*Caratteristiche del footer*/
+	#ilFooter{	
+		/*Caratteri di dimensione minore*/
+		font-size: 80%;
+		/*Non scorre*/
+		float: none;
+		/*Non deve avere elementi vicini*/
+		clear: both;
+		/*Definisco la larghezza, non 100% per evitare che eventualli immagini escano dai limiti*/
+		width: 99%;
+		/*Definisco l'allinemanto del testo*/
+		text-align: right;
+		/*Definisco i margini*/
+		margin-bottom: 1em;
+		/*Fisso a fondo pagina*/
+		position: fixed; bottom: 0;
+	}
+	
+	/*Rimozione dei link di navigazione tra le pagine*/
+	.indirizzi{
+		display: none;
+	}
+	
+	/*Caratteristiche di tutti i link*/
+	a{
+		/*Caratteristiche del font*/
+		font-family: Helvetica, Arial, sans-serif; font-size: 1em;
+		/*Sottolineati*/
+		text-decoration: underline;
+		/*Distinti perche' blu*/
+		color: blue;
+	}
+	
+	/*Esplicitare le url dei link (vedere come tratta link su Italo Calvino)*/
+	a:after{
+		content: " ("attr(href) ")";
+	}
+	
+	/*Caratteristiche per tutti gli elementi appartenenti alla classe email*/
+	.email{
+		/*In corsivo*/
+		font-style: italic;
+	}
+	
+	/*Caratteristiche per tutti gli elementi appartenenti alla classe indicazioni (specifiche che devono avere username e password per essere validi)*/
+	.indicazioni{
+		/*Sottolineati*/
+		text-decoration: underline;
+	}
+	
+	/*Gli elementi appartenenti alla classe titolo devono essere in grassetto*/
+	.titolo{
+		font-weight: bold;
+	}
+	
+	/*Gli elementi appartenenti alla classe attenzione devono essere in rosso e sottolineati visto che segnalano un problema*/
+	.attenzione{
+		color:red;
+		text-decoration: underline;
+	}
+	
+	/*Caratteristiche degli elementi appartenenti alla classe citazione*/
+	.citazione{
+		margin-top: 10em;
+		text-align: right;
+		font-style: italic;
+	}
+	
+	/*Caratteristiche del separatore tematico*/
+	hr{
+		border-color: black;
+	}
+	
+	/*Caratteristiche dei bottom dei form*/
+	.buttonRestituisci{
+		color: black;
+		text-align: center;
+		border: 1px solid black;
+	}
+	
+	/*Nascondo i fieldset*/
+	fieldset{
+		display: none;
+	}
+	
+	/*Caratteristiche delle tabelle*/
+	table {
+		border: 1px solid black;
+		margin-top: 1em;
+		display: table;
+		border-collapse: collapse;
+		border-spacing: 2px;
+		border-color: black;
+		table-layout: auto;
+		width: 99%;
+	}
+	
+	/*Caratteristiche dell'intestazione di tutte le tabelle*/
+	th {
+		border: 1px solid black;
+		color: black;
+		text-align: center;
+		padding:1.3em;
+	}
+	
+	/*Caratteristiche delle celle di tutte le tabelle*/
+	td {  
+		border: 1px solid black;
+		padding:1.3em;
+		vertical-align: center;
+		text-align: center;
+	}
+	
+	/*Caratteristiche della didascalia di tutte le tabelle*/
+	caption{ 
+		border: 3px solid black;
+		padding:1.3em;
+	}
+	
+	/*Oscuro la terza colona della tabella relativa ai prestiti dell'utente registrato*/	
+	.inPrestito>td:nth-child(3){
+		display: none;
+	}
+	
+	#foto{
+		display: none;
+	}
+	
+	.figlie{
+		width: 50%;
+		margin-bottom: 0em;
+	}
+	
+	.seconda{
+		margin-top:0;
+	}
+}
